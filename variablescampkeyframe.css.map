@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,YAAY;AAIZ,kBAAkB;AAIlB,aAAa",
+    "sources": [
+        "variablescampkeyframe.scss"
+    ],
+    "names": [],
+    "file": "variablescampkeyframe.css"
+}

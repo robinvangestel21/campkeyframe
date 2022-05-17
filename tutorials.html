@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,800;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylecampkeyframe.css">
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Camp Keyframe | Tutorials</title>
+</head>
+<body>
+    <div id="hamburger-container"> <!--for hamburger menu-->
+        <button onclick="hideHamburgerMenu()">
+            <svg version="1.1" id="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#FFFFFF;}
+            </style>
+            <g>
+                <g>
+                    <path class="st0" d="M40.57,42.58c-0.51,0-1.02-0.2-1.41-0.59L3.01,5.84c-0.78-0.78-0.78-2.05,0-2.83c0.78-0.78,2.05-0.78,2.83,0
+                        l36.15,36.15c0.78,0.78,0.78,2.05,0,2.83C41.6,42.38,41.09,42.58,40.57,42.58z"/>
+                </g>
+                <g>
+                    <path class="st0" d="M4.43,42.58c-0.51,0-1.02-0.2-1.41-0.59c-0.78-0.78-0.78-2.05,0-2.83L39.16,3.01c0.78-0.78,2.05-0.78,2.83,0
+                        c0.78,0.78,0.78,2.05,0,2.83L5.84,41.99C5.45,42.38,4.94,42.58,4.43,42.58z"/>
+                </g>
+            </g>
+            </svg>
+        </button>
+        <div class="links-container">
+            <a href="index.html">
+                <img src="assets/mobile_menu_home.svg" alt="Mobile Link Home">
+                <img class="hover" src="assets/mobile_menu_home_hover.svg" alt="Mobile Link Home Hover">
+            </a>
+            <a href="tutorials.html">
+                
+                <img src="assets/mobile_menu_tutorials_hover.svg" alt="Mobile Link Home Hover">
+            </a>
+            <!--<a href="freebies.html">
+                <img src="assets/mobile_menu_freebies.svg" alt="Mobile Link Home">
+                <img class="hover" src="assets/mobile_menu_freebies_hover.svg" alt="Mobile Link Home Hover">
+            </a>-->
+            <a href="store.html">
+                <img src="assets/mobile_menu_store.svg" alt="Mobile Link Home">
+                <img class="hover" src="assets/mobile_menu_store_hover.svg" alt="Mobile Link Home Hover">
+            </a>
+        </div>
+    </div>
+    <header id="header-foreground">
+        <div class="header-logo">
+            <a href="index.html"><img src="assets/camp_keyframe_logo.svg" alt="Camp Keyframe Logo"></a>
+        </div>
+        <div class="header-links">
+            <div class="header-link-and-circle">
+                <a class="header-link active" href="tutorials.html">tutorials</a>
+                <div class="hover-circle active"></div>
+            </div>
+            <!--<div class="header-link-and-circle">
+                <a class="header-link" href="freebies.html">freebies</a>
+                <div class="hover-circle"></div>
+            </div>-->
+            <div>
+                <a class="header-link store" href="store.html">store</a>
+            </div>
+            <div class="hamburger-icon">
+                <button onclick="showHamburgerMenu()">
+                    <img src="assets/hamburger_icon.svg" alt="Hamburger Icon">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="overlay-video-player">
+        <button onclick="disableVideoPlayer()">
+            <div class='video-header'>
+                <img src="assets/kruisje.svg">
+            </div>
+            <div id="player"></div>
+            <p id='title'></p>
+        </button>
+    </main>
+    
+    <main id="main-tutorials">
+        <img class="main-title" src="assets/intro_text_tutorials.svg" alt="Intro Text Tutorials">
+        <img class="mobile-title" src="assets/mobile_intro_text_tutorials.svg" alt="Intro Text Tutorials">
+        
+        <div class="search-container">
+            <input type="text" id="tutSearchInput" onkeyup="tutSearch()" placeholder="search" title="Search here">
+            <img src="assets/search_icon.svg">
+        </div>
+        <div class="search-container-bottom-border"></div>
+        <ul id="tutList">
+            <li>
+                <button onclick="enableVideoPlayer('EeeqlEovR5s', 'How to design and animate a Clock')">
+                    <img src="thumbnails/THUMBNAIL-CLOCK.jpg" alt="How to design and animate a Clock">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a diabled>How to design and animate a Clock</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('wmERvnpyTro', 'Control Text Layer With A Different Text Layer')">
+                    <img src="thumbnails/THUMBNAIL-DESIGN.jpg" alt="Control Text Layer With A Different Text Layer">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Control Text Layer With A Different Text Layer</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('RRzuMyJQnBs', 'Create Isometric Shapes in Seconds!')">
+                    <img src="thumbnails/ISOMETRIC-ACTIONS.jpg" alt="Create Isometric Shapes in Seconds!">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Create Isometric Shapes in Seconds!</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('0nfwcwDjB-I', 'Gamer Girl Character Illustration')">
+                    <img src="thumbnails/THUMBNAIL-DESIGN-final 2.jpg" alt="Gamer Girl Character Illustration">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Gamer Girl Character Illustration</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('8oy0-IdQxLg', 'Isometric City Illustration - Tutorial PART #4')">
+                    <img src="thumbnails/ISO-CITY-PART-4.jpg" alt="Isometric City Illustration - Tutorial PART #4">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Isometric City Illustration - Tutorial PART #4</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('GE_vNa7p1TA', 'How I made this Donut commercial in After Effects')">
+                    <img src="thumbnails/THUMBNAIL-DESIGN-final.jpg" alt="How I made this Donut commercial in After Effects">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>How I made this Donut commercial in After Effects</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('bAo2xjenOLE', 'Isometric City Illustration - Tutorial PART #3')">
+                    <img src="thumbnails/ISO-CITY-PART-3.jpg" alt="Isometric City Illustration - Tutorial PART #3">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Isometric City Illustration - Tutorial PART #3</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('t6_1QrwA28s', 'Isometric City Illustration - Tutorial PART #2')">
+                    <img src="thumbnails/ISO-CITY-PART-2.jpg" alt="Isometric City Illustration - Tutorial PART #2">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Isometric City Illustration - Tutorial PART #2</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('93nHQ53oH-A', 'Isometric City Illustration - Tutorial PART #1')">
+                    <img src="thumbnails/ISO-CITY-PART-1.jpg" alt="Isometric City Illustration - Tutorial PART #1">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Isometric City Illustration - Tutorial PART #1</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('a5nIuW3K9rk', 'Creating Moodboards with Milanote!')">
+                    <img src="thumbnails/MILANOTE-THUMBNAIL.jpg" alt="Creating Moodboards with Milanote!">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Creating Moodboards with Milanote!</a>
+                </button>
+            </li>
+            <li>
+                <button onclick="enableVideoPlayer('ycsNIpOqFrs', 'Animate a falling leaf')">
+                    <img src="thumbnails/Falling-Leaf.jpg" alt="Animate a falling leaf">
+                    <img class="hover" src="assets/watch_hover.svg" alt="Hover over tutorial">
+                    <a>Animate a falling leaf</a>
+                </button>
+            </li>
+        </ul>
+        <div class="push"></div>
+    </main>
+
+    <footer id="footer-foreground">
+        <div class='container'>
+            <div class="col-one">
+                <a href="index.html"><img class="icon" src="assets/camp_keyframe_footer_icon.svg" alt="Camp Keyframe Footer Icon"></a>
+                <div class="social-container">
+                    <a href="https://www.instagram.com/campkeyframe/" target="_blank">
+                        <img src="assets/icon_instagram.svg" alt="Icon Spotify">
+                        <img class="hover" src="assets/icon_instagram_hover.svg" alt="Icon Spotify Hover">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCTn7TWI56_GtbR1tS9gzRiQ" target="_blank">
+                        <img src="assets/icon_youtube.svg" alt="Icon Spotify">
+                        <img class="hover" src="assets/icon_youtube_hover.svg" alt="Icon Spotify Hover">
+                    </a>
+                </div>
+                <div class="links-container">
+                    <a href="index.html">home</a>
+                    <a href="tutorials.html">tutorials</a>
+                    <!--<a href="freebies.html">freebies</a>-->
+                    <a href="store.html">store</a>
+                </div>
+           </div>
+           <div class="col-two">
+            <img class="main-text" src="assets/footer_text.svg" alt="Footer Text">
+            <img class="mobile-text" src="assets/footer_text_mobile.svg" alt="Footer Text">
+                <p>The goal with Camp Keyframe is to get a conversation going with the audience about what they want to see. What kind of tutorials would you guys like to see?</p>
+                <p class="secondline">What techniques would you like to learn? What kind of video's should I make? Let me know what you would like to learn and I will always try to honour that when I can!</p>
+                <a href="mailto:campkeyframe@gmail.com">
+                    campkeyframe@gmail.com
+                </a>
+           </div>
+        </div>
+       
+    </footer>
+    
+    <script>
+        // YOUTUBE API
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function stopVideo() {
+            player.stopVideo();
+            player.destroy();
+        }
+
+        function enableVideoPlayer(id, title){
+            document.getElementById('overlay-video-player').style.display = "flex";
+            document.getElementById('title').innerHTML = title;
+
+            player = new YT.Player('player', {
+                videoId: id,
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+
+        function disableVideoPlayer(){
+            document.getElementById('overlay-video-player').style.display = "none";
+            stopVideo();
+        }
+
+        function tutSearch() {
+            var input = document.getElementById("tutSearchInput");
+            var filter = input.value.toUpperCase();
+            var ul = document.getElementById("tutList");
+            var li = ul.getElementsByTagName("li");
+            for (var i = 0; i < li.length; i++) {
+                var a = li[i].getElementsByTagName("a")[0];
+                var txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        function keyPress (e) {
+            if(e.key === "Escape") {
+                console.log("presed");
+            }
+        }
+
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                disableVideoPlayer();
+            }
+        };
+    </script>
+</body>
+</html>
